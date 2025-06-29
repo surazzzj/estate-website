@@ -11,17 +11,16 @@ const Navbar = () => {
       document.body.style.overflow = 'auto';
     }
 
-    // ✅ Clean up when unmounting
     return () => {
       document.body.style.overflow = 'auto';
     };
   }, [showMenu]);
 
-  return (    
+  return (
     <>
       {/* Top Navbar */}
       <div className='flex px-8 w-full z-10 items-center justify-between lg:px-28 py-6'>
-        <img src={assets.logo} alt="Logo" />
+        <img className='h-8' src={assets.logo} alt="Logo" />
         <ul className='hidden md:flex gap-6 text-white text-lg'>
           <a href='#Header' className='cursor-pointer hover:text-gray-300'>Home</a>
           <a href='#About' className='cursor-pointer hover:text-gray-300'>About</a>
@@ -33,13 +32,13 @@ const Navbar = () => {
         </button>
         <img
           onClick={() => setShowMenu(true)}
-          className='md:hidden inline-block w-7 cursor-pointer'
+          className='md:hidden inline-block h-4.5 cursor-pointer'
           src={assets.menu_icon}
           alt="Menu"
         />
       </div>
 
-      {/* Sidebar Menu with smooth scroll + slide transition */}
+      {/* Sidebar Menu */}
       <div
         className={`
           fixed top-0 right-0 h-screen w-full bg-white z-50 
@@ -50,14 +49,14 @@ const Navbar = () => {
         <ul className='h-full w-full overflow-y-auto scroll-smooth flex flex-col items-center pt-24 gap-4 text-lg font-medium px-4'>
           <img
             onClick={() => setShowMenu(false)}
-            className='absolute top-8 right-8 w-6 cursor-pointer'
+            className='absolute top-8 right-8 h-4.5 cursor-pointer'
             src={assets.cross_icon}
             alt="Close"
           />
-          <li>Home</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Testimonials</li>
+          <a href='#Header'>Home</a>
+          <a href='#About'>About</a>
+          <a href='#Projects'>Projects</a>
+          <a href='#Testimonials'>Testimonials</a>
         </ul>
       </div>
     </>

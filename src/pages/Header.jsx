@@ -17,10 +17,10 @@ const Header = () => {
             viewport={{ once: true }}
 
             className='flex flex-col items-center justify-center h-full gap-8 text-white text-center'>
-                <h2 className='text-5xl md:text-7xl font-semibold mx-auto px-6'>Explore homes that fit your dreams</h2>
-                <div className='flex list-none gap-6'>
-                    <li className='px-8 py-2 rounded-sm border'>Projects</li>
-                    <li className='px-8 py-2 rounded-sm bg-blue-500 text-white'>Contact Us</li>
+                <h2 className='text-4xl md:text-7xl font-medium md:font-semibold mx-auto px-6'>Explore homes that fit your dreams</h2>
+                <div className='flex list-none gap-4 md:gap-6'>
+                    <li className='px-6 text-sm  md:text-lg md:px-8 py-2 rounded-sm border'>Projects</li>
+                    <li className='px-6 md:px-8 text-sm md:text-lg py-2 rounded-sm bg-blue-500 text-white'>Contact Us</li>
                 </div>
             </motion.div>
         </div>

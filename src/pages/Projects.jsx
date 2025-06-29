@@ -57,14 +57,14 @@ const Projects = () => {
           className='p-3 md:p-3.5 bg-gray-200 rounded-sm'
           aria-label='Previous Project'
         >
-          <img src={assets.left_arrow} alt='Previous' />
+          <img className='h-3' src={assets.left_arrow} alt='Previous' />
         </button>
         <button
           onClick={nextProject}
           className='p-3 md:p-3.5 bg-gray-200 rounded-sm'
           aria-label='Next Project'
         >
-          <img src={assets.right_arrow} alt='Next' />
+          <img className='h-3' src={assets.right_arrow} alt='Next' />
         </button>
       </div>
 
@@ -91,9 +91,9 @@ const Projects = () => {
                   src={project.image}
                   alt={project.title}
                 />
-                <div className='absolute right-0 left-0 bottom-5 flex justify-center'>
-                  <div className='bg-white inline-block w-70 px-6 py-3 shadow-md'>
-                    <h2 className='text-xl font-semibold text-gray-800'>
+                <div className='absolute right-0 left-0 bottom-5 flex justify-center px-6 md:px-4'>
+                  <div className='bg-white inline-block w-full md:w-70 px-6 py-3 shadow-md'>
+                    <h2 className='text-lg md:text-xl font-semibold text-gray-800'>
                       {project.title}
                     </h2>
                     <p className='text-gray-500 text-sm'>
